@@ -1,0 +1,21 @@
+<%= render :partial => @question %>
+
+<h4>Answers</h4> 
+<div id="answers">
+
+<% @question.answers.each do |answer| %> 
+	<%= div_for answer do %>
+	<%= render 'answers/answer', :answer => answer %>
+	<% end %> 
+<% end %>
+
+</div>
+
+<%= form_for [@question, Answer.new], :remote => true do |f| %> 
+<p>
+<%= f.label :body, "New Answer" %>
+<br />
+<%= f.text_area :body %> 
+</p>
+<p><%= f.submit "Add Answer" %></p> 
+<% end %>
