@@ -48066,3 +48066,890 @@ ActionController::RoutingError (No route matches [GET] "/users/102/unm.ico"):
 
 Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
   [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/" for 127.0.0.1 at Mon Apr 16 14:23:33 -0600 2012
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 102 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.7ms)
+Rendered shared/_micropost_form.html.erb (42.9ms)
+  [1m[35m (22.2ms)[0m  SELECT COUNT(*) FROM "microposts" WHERE (user_id IN (SELECT followed_id FROM relationships
+ WHERE follower_id = 102) OR user_id = 102)
+Rendered shared/_feed.html.erb (24.5ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = 102[0m
+Rendered shared/_user_info.html.erb (42.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = 102
+  [1m[36m (21.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = 102[0m
+Rendered shared/_stats.html.erb (66.6ms)
+Rendered pages/home.html.erb within layouts/application (255.4ms)
+Rendered layouts/_stylesheets.html.erb (2.5ms)
+Rendered layouts/_header.html.erb (3.6ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 722ms (Views: 443.0ms | ActiveRecord: 65.7ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Mon Apr 16 14:23:34 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Mon Apr 16 14:23:34 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at Mon Apr 16 14:23:35 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Apr 16 14:23:42 -0600 2012
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 102 LIMIT 1
+Rendered shared/_error_messages.html.erb (0.1ms)
+Rendered shared/_micropost_form.html.erb (6.7ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE (user_id IN (SELECT followed_id FROM relationships
+ WHERE follower_id = 102) OR user_id = 102)[0m
+Rendered shared/_feed.html.erb (1.7ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = 102
+Rendered shared/_user_info.html.erb (3.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = 102[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = 102
+Rendered shared/_stats.html.erb (14.1ms)
+Rendered pages/home.html.erb within layouts/application (29.7ms)
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (3.4ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 157ms (Views: 44.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Mon Apr 16 14:23:42 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Mon Apr 16 14:23:42 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at Mon Apr 16 14:23:42 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Apr 16 14:23:44 -0600 2012
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 102 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.1ms)
+Rendered shared/_micropost_form.html.erb (7.6ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "microposts" WHERE (user_id IN (SELECT followed_id FROM relationships
+ WHERE follower_id = 102) OR user_id = 102)
+Rendered shared/_feed.html.erb (1.9ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = 102[0m
+Rendered shared/_user_info.html.erb (3.5ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = 102
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = 102[0m
+Rendered shared/_stats.html.erb (76.7ms)
+Rendered pages/home.html.erb within layouts/application (93.8ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (2.6ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 223ms (Views: 107.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Mon Apr 16 14:23:44 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Mon Apr 16 14:23:44 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at Mon Apr 16 14:23:44 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/signout" for 127.0.0.1 at Mon Apr 16 14:24:34 -0600 2012
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Apr 16 14:24:34 -0600 2012
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (20.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (1.8ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (2.6ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 155ms (Views: 16.7ms | ActiveRecord: 21.1ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Mon Apr 16 14:24:35 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Mon Apr 16 14:24:35 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at Mon Apr 16 14:24:35 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Apr 16 14:24:40 -0600 2012
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (1.3ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (2.5ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 118ms (Views: 16.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Mon Apr 16 14:24:41 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Mon Apr 16 14:24:41 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at Mon Apr 16 14:24:41 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/signin" for 127.0.0.1 at Mon Apr 16 14:24:43 -0600 2012
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (175.1ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 201ms (Views: 199.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Mon Apr 16 14:24:44 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Mon Apr 16 14:24:44 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at Mon Apr 16 14:24:44 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at Mon Apr 16 14:31:38 -0600 2012
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"275.madhu@gmail.com"}, "authenticity_token"=>"yI+UuFs8P3yDJNAjxt+RFDgIsbiYWKukeQbgZjj038o=", "utf8"=>"\342\234\223"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = '275.madhu@gmail.com' LIMIT 1
+Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (2.8ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 138ms (Views: 18.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Mon Apr 16 14:31:38 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Mon Apr 16 14:31:38 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.3ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at Mon Apr 16 14:31:38 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Apr 16 14:31:43 -0600 2012
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.1ms)
+Rendered users/_fields.html.erb (2.8ms)
+Rendered users/new.html.erb within layouts/application (15.1ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (3.1ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Mon Apr 16 14:31:43 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Mon Apr 16 14:31:43 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at Mon Apr 16 14:31:43 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Apr 16 14:31:59 -0600 2012
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"yI+UuFs8P3yDJNAjxt+RFDgIsbiYWKukeQbgZjj038o=", "utf8"=>"\342\234\223", "user"=>{"name"=>"Latha", "country"=>"India", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"randy123@rand.com"}}
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = 'randy123@rand.com' LIMIT 1[0m
+  [1m[35mSQL (72.4ms)[0m  INSERT INTO "users" ("admin", "auth_token", "country", "created_at", "email", "encrypted_password", "name", "salt", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["admin", false], ["auth_token", nil], ["country", "India"], ["created_at", Mon, 16 Apr 2012 20:31:59 UTC +00:00], ["email", "randy123@rand.com"], ["encrypted_password", "18be43493a1b313bb7646a9e42aa9a0ac5552251b2453303726224ad7298fa0c"], ["name", "Latha"], ["salt", "6c4942e48780d4c8a9d0c380945b857212c92cbfc14e42be5458cfe6b7b52349"], ["updated_at", Mon, 16 Apr 2012 20:31:59 UTC +00:00]]
+Redirected to http://localhost:3000/users/103
+Completed 302 Found in 160ms
+
+
+Started GET "/users/103" for 127.0.0.1 at Mon Apr 16 14:31:59 -0600 2012
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "103"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1
+Rendered users/_follow_form.html.erb (0.5ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = 103[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = 103
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = 103[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = 103
+Rendered shared/_stats.html.erb (12.7ms)
+Rendered users/show.html.erb within layouts/application (39.4ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (2.5ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 84ms (Views: 62.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Mon Apr 16 14:31:59 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Mon Apr 16 14:31:59 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/users/unm.ico" for 127.0.0.1 at Mon Apr 16 14:32:01 -0600 2012
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"unm"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "unm"]]
+Completed 404 Not Found in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=unm):
+  app/controllers/users_controller.rb:17:in `show'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.8ms)
+
+
+Started GET "/questions" for 127.0.0.1 at Mon Apr 16 14:32:25 -0600 2012
+  Processing by QuestionsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" ORDER BY questions.created_at DESC[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 102 LIMIT 1[0m
+Rendered questions/index.html.erb within layouts/application (35.7ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (2.6ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 182ms (Views: 72.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Mon Apr 16 14:32:25 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Mon Apr 16 14:32:25 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at Mon Apr 16 14:32:26 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/questions/new" for 127.0.0.1 at Mon Apr 16 14:32:34 -0600 2012
+  Processing by QuestionsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1
+Rendered questions/_form.html.erb (8.2ms)
+Rendered questions/new.html.erb within layouts/application (10.5ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (2.6ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 162ms (Views: 43.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Mon Apr 16 14:32:35 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Mon Apr 16 14:32:35 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/questions/unm.ico" for 127.0.0.1 at Mon Apr 16 14:32:35 -0600 2012
+  Processing by QuestionsController#show as 
+  Parameters: {"id"=>"unm"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."id" = ? ORDER BY questions.created_at DESC LIMIT 1  [["id", "unm"]]
+Completed 404 Not Found in 112ms
+
+ActiveRecord::RecordNotFound (Couldn't find Question with id=unm):
+  app/controllers/questions_controller.rb:15:in `show'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Apr 16 14:36:37 -0600 2012
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.1ms)
+Rendered shared/_micropost_form.html.erb (6.7ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "microposts" WHERE (user_id IN (SELECT followed_id FROM relationships
+ WHERE follower_id = 103) OR user_id = 103)
+Rendered shared/_feed.html.erb (1.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = 103[0m
+Rendered shared/_user_info.html.erb (3.7ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = 103
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = 103[0m
+Rendered shared/_stats.html.erb (13.5ms)
+Rendered pages/home.html.erb within layouts/application (29.1ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (2.7ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 153ms (Views: 43.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Mon Apr 16 14:36:37 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Mon Apr 16 14:36:37 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at Mon Apr 16 14:36:37 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Apr 16 15:36:14 -0600 2012
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1
+Rendered shared/_error_messages.html.erb (0.1ms)
+Rendered shared/_micropost_form.html.erb (6.6ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE (user_id IN (SELECT followed_id FROM relationships
+ WHERE follower_id = 103) OR user_id = 103)[0m
+Rendered shared/_feed.html.erb (1.6ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = 103
+Rendered shared/_user_info.html.erb (3.2ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = 103[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = 103
+Rendered shared/_stats.html.erb (14.3ms)
+Rendered pages/home.html.erb within layouts/application (29.7ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (2.7ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 173ms (Views: 43.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Mon Apr 16 15:36:14 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Mon Apr 16 15:36:14 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at Mon Apr 16 15:36:15 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Apr 16 17:48:35 -0600 2012
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.1ms)
+Rendered shared/_micropost_form.html.erb (7.2ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "microposts" WHERE (user_id IN (SELECT followed_id FROM relationships
+ WHERE follower_id = 103) OR user_id = 103)
+Rendered shared/_feed.html.erb (1.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = 103[0m
+Rendered shared/_user_info.html.erb (3.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = 103
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = 103[0m
+Rendered shared/_stats.html.erb (14.0ms)
+Rendered pages/home.html.erb within layouts/application (44.7ms)
+Rendered layouts/_stylesheets.html.erb (2.3ms)
+Rendered layouts/_header.html.erb (2.8ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 196ms (Views: 140.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Mon Apr 16 17:48:36 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Mon Apr 16 17:48:36 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at Mon Apr 16 17:48:36 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Apr 16 17:48:39 -0600 2012
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" LIMIT 30 OFFSET 0
+Rendered users/_user.html.erb (17.5ms)
+Rendered users/index.html.erb within layouts/application (66.3ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (2.5ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 115ms (Views: 104.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Mon Apr 16 17:48:39 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Mon Apr 16 17:48:39 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at Mon Apr 16 17:48:40 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Apr 17 08:58:38 -0600 2012
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.1ms)
+Rendered shared/_micropost_form.html.erb (63.0ms)
+  [1m[35m (22.6ms)[0m  SELECT COUNT(*) FROM "microposts" WHERE (user_id IN (SELECT followed_id FROM relationships
+ WHERE follower_id = 103) OR user_id = 103)
+Rendered shared/_feed.html.erb (24.3ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = 103[0m
+Rendered shared/_user_info.html.erb (77.5ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = 103
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = 103[0m
+Rendered shared/_stats.html.erb (198.7ms)
+Rendered pages/home.html.erb within layouts/application (560.3ms)
+Rendered layouts/_stylesheets.html.erb (13.9ms)
+Rendered layouts/_header.html.erb (3.2ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 27039ms (Views: 693.9ms | ActiveRecord: 115.3ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Tue Apr 17 08:59:16 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Tue Apr 17 08:59:16 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at Tue Apr 17 08:59:17 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Apr 17 21:44:13 -0600 2012
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1
+Rendered shared/_error_messages.html.erb (0.1ms)
+Rendered shared/_micropost_form.html.erb (7.9ms)
+  [1m[36m (23.3ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE (user_id IN (SELECT followed_id FROM relationships
+ WHERE follower_id = 103) OR user_id = 103)[0m
+Rendered shared/_feed.html.erb (24.8ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = 103
+Rendered shared/_user_info.html.erb (4.2ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = 103[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = 103
+Rendered shared/_stats.html.erb (23.4ms)
+Rendered pages/home.html.erb within layouts/application (91.5ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (3.0ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 390ms (Views: 147.6ms | ActiveRecord: 25.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Apr 17 21:44:14 -0600 2012
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.1ms)
+Rendered shared/_micropost_form.html.erb (8.1ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "microposts" WHERE (user_id IN (SELECT followed_id FROM relationships
+ WHERE follower_id = 103) OR user_id = 103)
+Rendered shared/_feed.html.erb (1.7ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = 103[0m
+Rendered shared/_user_info.html.erb (3.2ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = 103
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = 103[0m
+Rendered shared/_stats.html.erb (14.1ms)
+Rendered pages/home.html.erb within layouts/application (31.1ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (5.8ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 216ms (Views: 49.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Tue Apr 17 21:44:14 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Tue Apr 17 21:44:14 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at Tue Apr 17 21:44:14 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/users/103" for 127.0.0.1 at Tue Apr 17 21:44:40 -0600 2012
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"103"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "103"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1[0m
+Rendered users/_follow_form.html.erb (0.1ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = 103
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = 103[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = 103
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = 103[0m
+Rendered shared/_stats.html.erb (128.3ms)
+Rendered users/show.html.erb within layouts/application (165.3ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (2.8ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 224ms (Views: 206.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Tue Apr 17 21:44:40 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Tue Apr 17 21:44:40 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/unm.ico" for 127.0.0.1 at Tue Apr 17 21:44:41 -0600 2012
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"unm"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "unm"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=unm):
+  app/controllers/users_controller.rb:17:in `show'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.2ms)
+
+
+Started GET "/questions" for 127.0.0.1 at Tue Apr 17 21:44:46 -0600 2012
+  Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1[0m
+  [1m[35mQuestion Load (10.8ms)[0m  SELECT "questions".* FROM "questions" ORDER BY questions.created_at DESC
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 102 LIMIT 1
+Rendered questions/index.html.erb within layouts/application (11.6ms)
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (2.8ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 189ms (Views: 51.1ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Tue Apr 17 21:44:46 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Tue Apr 17 21:44:46 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at Tue Apr 17 21:44:47 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Apr 17 21:46:34 -0600 2012
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.1ms)
+Rendered shared/_micropost_form.html.erb (7.4ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "microposts" WHERE (user_id IN (SELECT followed_id FROM relationships
+ WHERE follower_id = 103) OR user_id = 103)
+Rendered shared/_feed.html.erb (1.5ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = 103[0m
+Rendered shared/_user_info.html.erb (3.1ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = 103
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = 103[0m
+Rendered shared/_stats.html.erb (86.9ms)
+Rendered pages/home.html.erb within layouts/application (102.7ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+Rendered layouts/_header.html.erb (3.0ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 259ms (Views: 119.0ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Apr 17 21:46:34 -0600 2012
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 103 LIMIT 1
+Rendered shared/_error_messages.html.erb (0.1ms)
+Rendered shared/_micropost_form.html.erb (10.1ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE (user_id IN (SELECT followed_id FROM relationships
+ WHERE follower_id = 103) OR user_id = 103)[0m
+Rendered shared/_feed.html.erb (2.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = 103
+Rendered shared/_user_info.html.erb (3.5ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = 103[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = 103
+Rendered shared/_stats.html.erb (15.0ms)
+Rendered pages/home.html.erb within layouts/application (34.7ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (3.1ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 235ms (Views: 147.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Tue Apr 17 21:46:34 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Tue Apr 17 21:46:34 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at Tue Apr 17 21:46:34 -0600 2012
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
