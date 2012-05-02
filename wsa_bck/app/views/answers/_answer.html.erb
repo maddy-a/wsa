@@ -1,0 +1,9 @@
+<p> <strong>
+	Posted <%= time_ago_in_words(answer.created_at) %>
+	Answered By: <%= answer.user.name %>
+	<% if current_user?(answer.user)%>
+	<%= link_to 'Edit', edit_question_answer_path(:id => answer.id, :question_id => answer.question.id) %> |
+	<% end %> 
+</strong>
+	<br /> <%= h(answer.body) %> 
+</p>

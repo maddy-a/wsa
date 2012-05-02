@@ -1,6 +1,11 @@
+
 <div class="field">
   <%= f.label :name %><br />
   <%= f.text_field :name %>
+</div>
+<div class="field">
+  <%= f.label :gender, "Gender" %><br /> 
+  <%= f.text_field :gender %> 
 </div>
 <div class="field">
   <%= f.label :email %><br />
@@ -18,3 +23,17 @@
   <%= f.label :country, "Country" %><br /> 
   <%= f.text_field :country %> 
 </div>
+<div class="field">
+  <%= f.label :department, "Department" %><br /> 
+  <%= f.text_field :department %> 
+</div>
+<div class="field">
+  <%= f.label :level, "What are you planning to do at UNM?" %><br /> 
+  <%= f.text_field :level %> 
+</div>
+
+<%#= f.inputs :name %>
+<%#= f.inputs :email %>
+<%#= f.inputs :gender, :include_blank => false %>
+<%#= f.inputs :password %>
+    

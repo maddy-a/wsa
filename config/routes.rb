@@ -1,5 +1,7 @@
 Wsa::Application.routes.draw do
 
+  resources :authentications
+
   resources :questions do 
     resources :answers 
   end
@@ -9,6 +11,8 @@ Wsa::Application.routes.draw do
       get :following, :followers, :network, :news
     end
   end
+  
+  match '/auth/:provider/callback' => 'authentications#create'
   
   resources :sessions,      :only => [:new, :create, :destroy]
   resources :microposts,    :only => [:create, :destroy]

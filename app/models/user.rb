@@ -19,8 +19,9 @@ class User < ActiveRecord::Base
   
 
   # Setup accessible (or protected) attributes for your model
+  has_many :authentications
   attr_accessor   :password
-  attr_accessible :name, :email, :password, :password_confirmation, :country, :remember_me
+  attr_accessible :name, :email, :password, :password_confirmation, :country, :department, :gender, :level, :remember_me
   
   has_many :microposts,    :dependent => :destroy
   has_many :relationships, :dependent => :destroy,
@@ -35,7 +36,7 @@ class User < ActiveRecord::Base
   has_many :questions, :dependent => :destroy
   has_many :answers, :dependent => :destroy
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  
+ 
   validates :name,  :presence => true,
                     :length   => { :maximum => 50 }
   validates :email, :presence   => true,
@@ -47,11 +48,24 @@ class User < ActiveRecord::Base
   
   validates_presence_of :country
 
+  validates_inclusion_of :gender, :in => [:male, :female]
+  
+  validates_inclusion_of :level, :in => [:undergrad, :exchange, :masters, :PhD, :scholar, :other]
+  
+  validates_inclusion_of :department, :in => [:engineering, :arts, :maths, :architecture, :education, :medical, :pharmacy, :physics]
   
   before_save :encrypt_password
   
   def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password)
+  end
+  
+  def enum_of_other_fields
+     read_attribute(:gender, :level, :department).to_sym
+  end
+
+  def enum_of_other_fields= (value)
+     write_attribute(:gender, :level, :department, value.to_s)
   end
   
   def feed

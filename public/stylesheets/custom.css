@@ -91,16 +91,18 @@ nav ul li a:hover {
 /* Sign up button */
 
 a.signup_button {
-  margin-left: auto;
+ /* margin-left: auto;
   margin-right: auto;
   display: block;
-  text-align: center;
-  width: 190px;
+  text-align: center;*/
+  width: 100px;
+  height: 30px;
   color: #fff; 
   background: #c71e4b;
   font-size: 150%;
   font-weight: bold;
   padding: 20px;
+
 }
 
 /* Round corners */

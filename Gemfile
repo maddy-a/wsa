@@ -5,15 +5,15 @@ gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'will_paginate', '~>3.0.2'
 gem 'sqlite3', '1.3.4'
 gem 'bcrypt-ruby', :require => 'bcrypt'
-#gem 'awesome_nested_set'
-gem "omniauth"
+gem 'awesome_nested_set'
+gem 'nifty-generators'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'formtastic'
 group :development do
   gem 'rspec-rails'
   gem 'annotate', '2.4.0'
   gem 'faker', '0.3.1'
-  gem "rails-erd"
-  gem 'railroad'
-  gem 'railroady'
 end
 
 group :test do
@@ -24,9 +24,9 @@ group :test do
   gem 'webrat', '0.7.1'
   gem 'spork', '0.9.0.rc8'
   gem 'factory_girl_rails', '1.0'
-  gem 'railroady'
   # gem 'autotest', '4.4.6'
   # gem 'autotest-rails-pure', '4.1.2'
   # gem 'autotest-fsevent', '0.2.4'
   # gem 'autotest-growl', '0.2.9'
 end
+gem "mocha", :group => :test
