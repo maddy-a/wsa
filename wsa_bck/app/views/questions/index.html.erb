@@ -1,0 +1,26 @@
+<h1>Listing questions</h1>
+
+<table>
+  <tr>
+	<th>Author</th>
+    <th>Title</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @questions.each do |question| %>
+
+  <tr>
+	<td><%= question.user.name %></td>
+    <td><%= question.title %></td>
+    <td><%= link_to 'Show', question %></td>
+	<% if current_user?(question.user)%>
+		<td><%= link_to 'Edit', edit_question_path(question) %></td>
+		<td><%= link_to 'Destroy', question, :confirm => 'Are you sure?', :method => :delete %></td>
+	<% end %>  
+  </tr>
+<% end %>
+</table>
+<br />
+<%= link_to 'New Question', new_question_path %>

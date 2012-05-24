@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Answers</h2> 
+<div id="answers"> 
+<%= render :partial => @question.answers.reverse %>
+</div>
+
+
+<%= link_to 'Edit', edit_answer_path(@answer) %> |
+<%= link_to 'Back', answers_path %>
+

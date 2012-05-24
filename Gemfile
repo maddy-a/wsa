@@ -6,6 +6,10 @@ gem 'will_paginate', '~>3.0.2'
 gem 'sqlite3', '1.3.4'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'awesome_nested_set'
+gem 'nifty-generators'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'formtastic'
 group :development do
   gem 'rspec-rails'
   gem 'annotate', '2.4.0'
@@ -25,3 +29,4 @@ group :test do
   # gem 'autotest-fsevent', '0.2.4'
   # gem 'autotest-growl', '0.2.9'
 end
+gem "mocha", :group => :test

@@ -10,7 +10,9 @@ class UsersController < ApplicationController
   
   def network
     @title = "All users"
-    @users = User.find_all_by_country(User.find(params[:id]).country)
+    @users_c = User.find_all_by_country(User.find(params[:id]).country)
+    @users_d = User.find_all_by_department(User.find(params[:id]).department)
+    @users_l = User.find_all_by_level(User.find(params[:id]).level)
   end
   
   def show
@@ -36,6 +38,7 @@ class UsersController < ApplicationController
   def new
     @user  = User.new
     @title = "Sign up"
+    omniauth = request.env["omniauth.auth"]
   end
   
   def create

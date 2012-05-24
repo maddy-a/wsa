@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120229063357) do
+ActiveRecord::Schema.define(:version => 20120419070445) do
 
   create_table "answers", :force => true do |t|
     t.integer  "question_id"
@@ -21,6 +21,14 @@ ActiveRecord::Schema.define(:version => 20120229063357) do
   end
 
   add_index "answers", ["user_id"], :name => "index_answers_on_user_id"
+
+  create_table "authentications", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "provider"
+    t.string   "uid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
@@ -62,6 +70,9 @@ ActiveRecord::Schema.define(:version => 20120229063357) do
     t.boolean  "admin",              :default => false
     t.string   "country",            :default => "India"
     t.string   "auth_token"
+    t.string   "department"
+    t.string   "gender"
+    t.string   "level"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

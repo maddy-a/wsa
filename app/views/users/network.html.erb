@@ -1,6 +1,30 @@
-<h1>All users</h1>
+<h4>From <%= current_user.country%></h4>
 <ul class="users"> 
-<% @users.each do |user| %>
+<% @users_c.each do |userc| %>
+<li>
+<%= gravatar_for userc, :size => 30 %>
+<%= link_to userc.name, userc %> 
+</li>
+<% end %> 
+</ul>
+
+<hr>
+
+<h4>From <%= current_user.department%> department</h4>
+<ul class="users"> 
+<% @users_d.each do |user| %>
+<li>
+<%= gravatar_for user, :size => 30 %>
+<%= link_to user.name, user %> 
+</li>
+<% end %> 
+</ul>
+
+<hr>
+
+<h4>Doing <%= current_user.level%></h4>
+<ul class="users"> 
+<% @users_l.each do |user| %>
 <li>
 <%= gravatar_for user, :size => 30 %>
 <%= link_to user.name, user %> 

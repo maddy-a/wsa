@@ -1,0 +1,36 @@
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+		
+      </h1>
+      <%= render 'follow_form' if signed_in? %>
+      <% if @user.microposts.any? %>
+        <table class="microposts" summary="User microposts">
+          <%= render @microposts %>
+        </table>
+        <%= will_paginate @microposts %>
+      <% end %>
+    </td>
+    <td class="sidebar round">
+	  	<div id="user_nav">
+		<% if current_user %>
+			Logged in as <%= current_user.name %>
+		<% end%>
+		</div><br/>
+      <strong>Name</strong> <%= @user.name %><br />
+	  <strong>Country</strong> <%= @user.country %><br />
+      <strong>URL</strong>  <%= link_to user_path(@user), @user %><br />
+      <strong>Microposts</strong> <%= @user.microposts.count %>
+      <%= render 'shared/stats' %>
+	<!-- Begin ShoutMix -->
+	<iframe id="shoutmix_152bbe" src="http://sht.mx/152bbe" width="240" height="480" frameborder="0" scrolling="auto">
+	<a href="http://sht.mx/152bbe">Join the conversation at ShoutMix</a>
+	</iframe>
+		
+    </td>
+  </tr>
+</table>
+

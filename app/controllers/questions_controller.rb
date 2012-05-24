@@ -33,9 +33,9 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = current_user.questions.build!(params[:question])
+    @question = current_user.questions.create!(params[:question])
       if @question.save
-        redirect_to root_path, :flash => { :success => "Question created!" }
+        redirect_to questions_path, :flash => { :success => "Question created!" }
       else
        render 'pages/home'
       end

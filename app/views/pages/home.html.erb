@@ -21,7 +21,26 @@
   This is the home page for the <a href="http://oips.unm.edu/">World Student Alliance</a>.
 We are an international student organization who help international students in any way possible. If you are an incoming international graduate or undergraduate student from anywhere in the world. <br/>Come join and bug us. We are here to help you! </br>Well if you are already a student here then get bugged and have fun reconnecting with your friends from your own country!
 </p>
-
-<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+<a href="/auth/twitter" class="auth_provider">
+  <%= image_tag "twitter_64.png", :size => "64x64", :alt => "Twitter" %>
+  Twitter
+</a>
+<a href="/auth/facebook" class="auth_provider">
+  <%= image_tag "facebook_64.png", :size => "64x64", :alt => "Facebook" %>
+  Facebook
+</a>
+<a href="/auth/google_apps" class="auth_provider">
+  <%= image_tag "google_64.png", :size => "64x64", :alt => "Google" %>
+  Google
+</a>
+<a href="/auth/yahoo" class="auth_provider">
+  <%= image_tag "yahoo_64.png", :size => "64x64", :alt => "OpenID" %>
+  OpenID
+</a>
+<br/>
+<br/>
+<br/>
+If you dont have any of the above you can also sign up:
+<%= link_to "Sign up!", signup_path, :class => "signup_button round"%>
 
 <% end %>
