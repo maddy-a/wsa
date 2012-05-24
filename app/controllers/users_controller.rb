@@ -38,6 +38,7 @@ class UsersController < ApplicationController
   def new
     @user  = User.new
     @title = "Sign up"
+    omniauth = request.env["omniauth.auth"]
   end
   
   def create
