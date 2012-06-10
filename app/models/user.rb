@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   has_many :authentications
   attr_accessor   :password
-  attr_accessible :name, :email, :password, :password_confirmation, :country, :department, :gender, :level, :remember_me
+  attr_accessible :name, :email, :password, :password_confirmation, :country, :department, :gender, :level, :remember_me, :external
   
   has_many :microposts,    :dependent => :destroy
   has_many :relationships, :dependent => :destroy,
@@ -42,10 +42,7 @@ class User < ActiveRecord::Base
   validates :email, :presence   => true,
                     :format     => { :with => email_regex },
                     :uniqueness => true
-  validates :password, :presence => true,
-                       :confirmation => true,
-                       :length => { :within => 6..40 }
-  
+  validate :native_password
   validates_presence_of :country
 
   validates_inclusion_of :gender, :in => [:male, :female]
@@ -55,7 +52,20 @@ class User < ActiveRecord::Base
   validates_inclusion_of :department, :in => [:engineering, :arts, :maths, :architecture, :education, :medical, :pharmacy, :physics]
   
   before_save :encrypt_password
+ 
   
+  def native_password   
+     self.errors.add :base, "Password can't be blank!" if !external?
+  end 
+  
+  def apply_omniauth(omniauth)
+    authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
+  end
+  
+  def password_required?
+    (authentications.empty? || !password.blank?) && super
+  end
+   
   def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password)
   end

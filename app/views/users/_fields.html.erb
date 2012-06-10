@@ -11,14 +11,20 @@
   <%= f.label :email %><br />
   <%= f.text_field :email %>
 </div>
-<div class="field">
-  <%= f.label :password %><br />
-  <%= f.password_field :password %>
-</div>
-<div class="field">
-  <%= f.label :password_confirmation, "Confirmation" %><br />
-  <%= f.password_field :password_confirmation %>
-</div>
+<% if @omniauth.blank? %>
+
+		<div class="field">
+		  <%= f.label :password %><br />
+		  <%= f.password_field :password %>
+		</div>
+		<div class="field">
+		  <%= f.label :password_confirmation, "Confirmation" %><br />
+		  <%= f.password_field :password_confirmation %>
+	   </div>
+<% else %>
+	<%= f.hidden_field(:external, :value => false)%>
+<% end %>
+
 <div class="field">
   <%= f.label :country, "Country" %><br /> 
   <%= f.text_field :country %> 
@@ -37,3 +43,4 @@
 <%#= f.inputs :gender, :include_blank => false %>
 <%#= f.inputs :password %>
     
+<%= @omniauth.inspect %>

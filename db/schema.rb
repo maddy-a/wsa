@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120419070445) do
+ActiveRecord::Schema.define(:version => 20120525022721) do
 
   create_table "answers", :force => true do |t|
     t.integer  "question_id"
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(:version => 20120419070445) do
     t.string   "department"
     t.string   "gender"
     t.string   "level"
+    t.boolean  "external"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
