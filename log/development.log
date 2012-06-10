@@ -64855,3 +64855,37 @@ ActionController::RoutingError (No route matches [GET] "/unm.ico"):
   
 
 Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20100821203213)
+Migrating to AddEmailUniquenessIndex (20100822012431)
+Migrating to AddPasswordToUsers (20100822204528)
+Migrating to AddSaltToUsers (20100822233125)
+Migrating to AddAdminToUsers (20100829021049)
+Migrating to CreateMicroposts (20100829210229)
+Migrating to CreateRelationships (20100831012055)
+Migrating to AddCountryToUsers (20111209005208)
+Migrating to AddAuthTokenToUsers (20120201181033)
+Migrating to CreateQuestions (20120214055848)
+Migrating to CreateAnswers (20120214060022)
+Migrating to AddUserIdToQuestions (20120223093240)
+Migrating to AddUserIdToAnswers (20120229063357)
+Migrating to CreateAuthentications (20120418072803)
+Migrating to AddDepartmentToUsers (20120419065455)
+Migrating to AddGenderToUsers (20120419070039)
+Migrating to AddLevelToUsers (20120419070445)
+Migrating to AddExternalToUser (20120525022721)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("answers")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_answers_on_user_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("authentications")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("microposts")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_microposts_on_user_id_and_created_at')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("questions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_questions_on_user_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("relationships")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_relationships_on_follower_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_relationships_on_follower_id_and_followed_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_relationships_on_followed_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_email')

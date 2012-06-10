@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails','3.1.2.rc2'
 gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'will_paginate', '~>3.0.2'
-
+gem 'rdoc'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'awesome_nested_set'
 gem 'nifty-generators'
@@ -32,6 +32,7 @@ group :test do
   # gem 'autotest-growl', '0.2.9'
 end
 group :production do
-	gem 'pg'
+  gem 'pg'
+  gem 'thin'
 end
 gem "mocha", :group => :test
