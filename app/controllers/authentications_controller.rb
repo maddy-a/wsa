@@ -2,6 +2,7 @@ class AuthenticationsController < ApplicationController
   def index
     @authentications = current_user.authentications if current_user
   end
+# This is the crappy Omniauth that took like fing 1000 hours for me to complete. 
 
   def create
     omniauth = request.env["omniauth.auth"] 
@@ -19,12 +20,12 @@ class AuthenticationsController < ApplicationController
         user= User.new
         user.apply_omniauth(omniauth)
         if user.save
-          flash[:notice] = "Signed in successfully."
+         flash[:notice] = "Signed in successfully."
           redirect_back_or authentication.user
         else
-          session[:omniauth] = omniauth.except('extra')
+         session[:omniauth] = omniauth.except('extra')
           redirect_to signup_path
-        end
+    end
    #authenticate= Authentication.create!(:provider => omniauth['provider'], :uid => omniauth['uid'])
   # flash[:notice] = "You still need to fill up the following"
    # This is where I have doubt as to how should I proceed. Should I first create authentication for omniauth and then redirect or just send everything together and then create in sign up?

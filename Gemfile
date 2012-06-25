@@ -14,12 +14,12 @@ group :development do
   gem 'rspec-rails'
   gem 'annotate', '2.4.0'
   gem 'faker', '0.3.1'
-#  gem 'sqlite3', '1.3.4'
+  gem 'sqlite3', '1.3.4'
 end
 
 group :test do
   gem 'rspec-rails'
-#  gem 'sqlite3', '1.3.4'
+  gem 'sqlite3', '1.3.4'
   gem 'cucumber', '1.1.3'
   gem 'rspec-expectations', '2.6.0'
   gem 'capybara' 
@@ -31,8 +31,8 @@ group :test do
   # gem 'autotest-fsevent', '0.2.4'
   # gem 'autotest-growl', '0.2.9'
 end
-#group :production do
-  gem 'pg'
-  gem 'thin'
-#end
+group :production do
+#  gem 'pg'
+#  gem 'thin'
+end
 gem "mocha", :group => :test
