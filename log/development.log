@@ -64889,3 +64889,474 @@ Migrating to AddExternalToUser (20120525022721)
   [1m[35m (0.0ms)[0m  PRAGMA index_info('index_relationships_on_followed_id')
   [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
   [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-23 19:53:54 -0600
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered pages/home.html.erb within layouts/application (79.0ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (4.0ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 581ms (Views: 488.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at 2012-06-23 19:53:59 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at 2012-06-23 19:53:59 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at 2012-06-23 19:53:59 -0600
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at 2012-06-23 19:53:59 -0600
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at 2012-06-23 19:53:59 -0600
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2012-06-23 19:54:05 -0600
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (75.0ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 94ms (Views: 93.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at 2012-06-23 19:54:05 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at 2012-06-23 19:54:05 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-06-23 19:54:19 -0600
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M6PYYwfG/fh3vQjSvCurKO8koyIEuAKfh7PyaO4xH90=", "session"=>{"email"=>"uday88k@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'uday88k@gmail.com' LIMIT 1[0m
+Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (3.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 117ms (Views: 21.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at 2012-06-23 19:54:19 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at 2012-06-23 19:54:19 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-06-23 19:54:39 -0600
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M6PYYwfG/fh3vQjSvCurKO8koyIEuAKfh7PyaO4xH90=", "session"=>{"email"=>"chaotic_clone01@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'chaotic_clone01@yahoo.com' LIMIT 1
+Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Rendered layouts/_stylesheets.html.erb (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (3.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 65ms (Views: 20.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at 2012-06-23 19:54:39 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at 2012-06-23 19:54:39 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-06-23 19:54:42 -0600
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (1.0ms)
+Rendered users/_fields.html.erb (144.0ms)
+Rendered users/new.html.erb within layouts/application (239.0ms)
+Completed 500 Internal Server Error in 246ms
+
+ActionView::Template::Error (undefined method `gender' for #<User:0x3d5f918>):
+    5: </div>
+    6: <div class="field">
+    7:   <%= f.label :gender, "Gender" %><br /> 
+    8:   <%= f.text_field :gender %> 
+    9: </div>
+    10: <div class="field">
+    11:   <%= f.label :email %><br />
+  app/views/users/_fields.html.erb:8:in `_app_views_users__fields_html_erb___1068532022_49406184'
+  app/views/users/new.html.erb:6:in `block in _app_views_users_new_html_erb__508090363_31430580'
+  app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb__508090363_31430580'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20100821203213)
+Migrating to AddEmailUniquenessIndex (20100822012431)
+Migrating to AddPasswordToUsers (20100822204528)
+Migrating to AddSaltToUsers (20100822233125)
+Migrating to AddAdminToUsers (20100829021049)
+Migrating to CreateMicroposts (20100829210229)
+Migrating to CreateRelationships (20100831012055)
+Migrating to AddCountryToUsers (20111209005208)
+Migrating to AddAuthTokenToUsers (20120201181033)
+Migrating to CreateQuestions (20120214055848)
+Migrating to CreateAnswers (20120214060022)
+Migrating to AddUserIdToQuestions (20120223093240)
+Migrating to AddUserIdToAnswers (20120229063357)
+Migrating to CreateAuthentications (20120418072803)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "authentications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "provider" varchar(255), "uid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120418072803')
+Migrating to AddDepartmentToUsers (20120419065455)
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "users" ADD "department" varchar(255)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120419065455')
+Migrating to AddGenderToUsers (20120419070039)
+  [1m[36m (2.0ms)[0m  [1mALTER TABLE "users" ADD "gender" varchar(255)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120419070039')
+Migrating to AddLevelToUsers (20120419070445)
+  [1m[36m (2.0ms)[0m  [1mALTER TABLE "users" ADD "level" varchar(255)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120419070445')
+Migrating to AddExternalToUser (20120525022721)
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "users" ADD "external" boolean[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120525022721')
+  [1m[36m (1.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("answers")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_answers_on_user_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("authentications")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("microposts")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_microposts_on_user_id_and_created_at')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("questions")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_questions_on_user_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("relationships")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_relationships_on_follower_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_relationships_on_follower_id_and_followed_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_relationships_on_followed_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-06-23 19:57:30 -0600
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.0ms)
+Rendered users/_fields.html.erb (3.0ms)
+Rendered users/new.html.erb within layouts/application (135.0ms)
+Rendered layouts/_stylesheets.html.erb (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (39.0ms)
+Rendered layouts/_footer.html.erb (2.0ms)
+Completed 200 OK in 404ms (Views: 401.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at 2012-06-23 19:57:35 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at 2012-06-23 19:57:35 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at 2012-06-23 19:57:35 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-25 13:36:49 -0600
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered pages/home.html.erb within layouts/application (140.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (10.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 730ms (Views: 590.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at 2012-06-25 13:36:55 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at 2012-06-25 13:36:55 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at 2012-06-25 13:36:55 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at 2012-06-25 13:36:56 -0600
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at 2012-06-25 13:36:56 -0600
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/unm.ico" for 127.0.0.1 at 2012-06-25 13:36:56 -0600
+
+ActionController::RoutingError (No route matches [GET] "/unm.ico"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-25 13:51:11 -0600
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered pages/home.html.erb within layouts/application (2.0ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (2.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 64ms (Views: 19.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at 2012-06-25 13:51:11 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at 2012-06-25 13:51:11 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-06-25 13:51:26 -0600
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (1.0ms)
+Rendered users/_fields.html.erb (3.0ms)
+Rendered users/new.html.erb within layouts/application (38.0ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (4.0ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at 2012-06-25 13:51:26 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at 2012-06-25 13:51:26 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-25 14:35:01 -0600
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered pages/home.html.erb within layouts/application (61.0ms)
+Rendered layouts/_stylesheets.html.erb (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (3.0ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 419ms (Views: 316.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at 2012-06-25 14:35:06 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at 2012-06-25 14:35:06 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at 2012-06-25 14:35:06 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery_ujs.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-25 14:41:08 -0600
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered pages/home.html.erb within layouts/application (2.0ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (2.0ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 64ms (Views: 20.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/javascripts/jquery.rails.js" for 127.0.0.1 at 2012-06-25 14:41:08 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.rails.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/jquery.rails.js" for 127.0.0.1 at 2012-06-25 14:41:09 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.rails.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-25 14:41:11 -0600
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered pages/home.html.erb within layouts/application (3.0ms)
+Rendered layouts/_stylesheets.html.erb (1.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (2.0ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 91ms (Views: 19.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/javascripts/jquery.rails.js" for 127.0.0.1 at 2012-06-25 14:41:11 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.rails.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/jquery.rails.js" for 127.0.0.1 at 2012-06-25 14:41:11 -0600
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/jquery.rails.js"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.1.2.rc2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-25 14:41:53 -0600
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered pages/home.html.erb within layouts/application (3.0ms)
+Rendered layouts/_stylesheets.html.erb (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (3.0ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 62ms (Views: 19.0ms | ActiveRecord: 2.0ms)
