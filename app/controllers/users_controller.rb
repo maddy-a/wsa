@@ -38,18 +38,32 @@ class UsersController < ApplicationController
   def new
     @user  = User.new
     @title = "Sign up"
-    @omniauth= session[:omniauth]
+   # @omniauth= session[:omniauth]
+    @omniauth = ""
   end
   
+=begin  
+def new_omni
+    @user  = User.new
+  #  @auth = Authentication.new
+    @title = "Sign up"
+    @omniauth= session[:omniauth]
+    
+  end
+=end  
   def create
     @user = User.new(params[:user])
-    if @user.save
-      sign_in @user
-      redirect_to @user, :flash => { :success => "Welcome to the World Student Alliance!" }
-    else
-      @title = "Sign up"
-      render 'new'
-    end
+    #if @omniauth
+      if @user.save
+        sign_in @user
+        redirect_to @user, :flash => { :success => "Welcome to the World Student Alliance!" }
+      else
+        @title = "Sign up"
+        render 'new'
+      end
+   # else
+  #  end
+      
   end
   
   def edit

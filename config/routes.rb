@@ -24,6 +24,7 @@ Wsa::Application.routes.draw do
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'
   match '/signup',  :to => 'users#new'
+ # match '/signup_omni', :to => 'users#new_omni'
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
   # The priority is based upon order of creation:

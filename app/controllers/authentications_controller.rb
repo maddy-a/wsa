@@ -5,18 +5,22 @@ class AuthenticationsController < ApplicationController
 # This is the crappy Omniauth that took like fing 1000 hours for me to complete. 
 
   def create
+    #Get the omniauth object
     omniauth = request.env["omniauth.auth"] 
     authentication= Authentication.find_by_provider_and_uid(omniauth['provider'],omniauth['uid'])
     if authentication
+      #Authentication successfull before
       flash[:notice]= "Signed in with " + omniauth['provider'] + " Successfully"
       sign_in(authentication.user)
       redirect_back_or authentication.user
     elsif current_user
+      #The user is already registered but want to use omniauth for authentication
       current_user.authentications.create!(:provider => omniauth['provider'],:uid => omniauth['uid'])
       flash[:notice]="Authentication successfull. You can use your " + omniauth['provider'] + " for signing in next time."
       #redirect_back_or authentication.user
       redirect_to authentications_url
     else
+      #User is not registered and want to use omniauth. We need to get more info out from the users. So omniauth is added and the user is redirected to a form. 
         user= User.new
         user.apply_omniauth(omniauth)
         if user.save
